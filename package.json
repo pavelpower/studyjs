@@ -1,0 +1,22 @@
+{
+  "name": "stydyjs",
+  "version": "0.0.0",
+  "description": "studyjs =======",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mwmaleks/studyjs.git"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/mwmaleks/studyjs/issues"
+  },
+  "dependencies": {
+    "backbone" : "1.0.0",
+    "underscore": "*"
+  }
+}
