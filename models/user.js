@@ -2,11 +2,7 @@ var Backbone = require('backbone');
 var _ = require('underscore');
 
 var User = Backbone.Model.extend({
-    
-    constructor: function() {
-        Backbone.Model.apply(this, arguments);
-    },
-    
+
     validate: function(attrs, options) {
         
        if ( !_.isString(attrs.name)) {
@@ -20,7 +16,20 @@ var User = Backbone.Model.extend({
        if ( !_.isString(attrs.position) ) {
            return "";
        }
-     }
+    },
+    setName: function(name) {
+	this.name = name;
+	},
+    setAge: function(age) {
+        this.age = age;
+         },
+    setPosition: function (pos) {
+        this.position = pos;
+         },
+    addAge: function(pos) {
+        this.position = pos;
+        (this.age++)
+    } 
 });
 
 

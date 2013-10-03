@@ -16,15 +16,13 @@ user.on("invalid", function(model, error) {
 
 //user.trigger('invalid', user, 'asdsdasd');
 
-console.log('begin');
+//console.log('begin');
 
-user.save();
+//user.save();
 
-user.on('change:name', function(model, value) {
-    console.log('change:name', value);
-});
+//user.on('change:name', function(model, value) {
+   // console.log('change:name', value);
+//});
 
-user.set('name', 'Vasya');
-user.set({ name: 'Oleg' });
-
-user.destroy();
+user.set('Алексей');
+console.log (user.name)
