@@ -3,26 +3,18 @@
  * and open the template in the editor.
 
  * */
-var User = require('../models/user.js');
-var user = new User({ name: 3242 });
+var _ = require('underscore');
+var User = require('../models/user');
 
-user.on("invalid", function(model, error) {
-  console.log(model.get("name") + " " + error);
-});
+// create object user
+var user = new User({ name: 'Alexey', age: 31 });
 
-user.on("invalid", function(model, error) {
-  console.log("bla blab bla" + error);
-});
+var age = user.get('age');
 
-//user.trigger('invalid', user, 'asdsdasd');
+if ( ! _.isFunction(user.addAge) )
+    throw 'not found method addAge in user object'
 
-//console.log('begin');
+user.addAge();
 
-//user.save();
-
-//user.on('change:name', function(model, value) {
-   // console.log('change:name', value);
-//});
-
-user.set('Алексей');
-console.log (user.name)
+if (age !== user.get('age') + 1) 
+    throw 'age is not added';

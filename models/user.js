@@ -17,19 +17,12 @@ var User = Backbone.Model.extend({
            return "";
        }
     },
-    setName: function(name) {
-	this.name = name;
-	},
-    setAge: function(age) {
-        this.age = age;
-         },
-    setPosition: function (pos) {
-        this.position = pos;
-         },
-    addAge: function(pos) {
-        this.position = pos;
-        (this.age++)
-    } 
+    
+    addAge: function() {
+        this.set('age', this.get('age') + 1);
+    }
+    
+    
 });
 
 
