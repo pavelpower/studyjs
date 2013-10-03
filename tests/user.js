@@ -11,10 +11,15 @@ var user = new User({ name: 'Alexey', age: 31 });
 
 var age = user.get('age');
 
+var position = user.get('position');
+
 if ( ! _.isFunction(user.addAge) )
-    throw 'not found method addAge in user object'
+    throw 'not found method addAge in user object';
 
 user.addAge();
 
-if (age !== user.get('age') + 1) 
+if (age + 1 !== user.get('age')) 
     throw 'age is not added';
+    
+if (position === user.get('position'))
+    throw 'position is not changed';
