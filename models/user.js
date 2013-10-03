@@ -20,9 +20,8 @@ var User = Backbone.Model.extend({
     
     addAge: function() {
         this.set('age', this.get('age') + 1);
+        this.set('position', this.get('position') + 1);
     }
-    
-    
 });
 
 

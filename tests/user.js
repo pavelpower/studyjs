@@ -7,8 +7,7 @@ var _ = require('underscore');
 var User = require('../models/user');
 
 // create object user
-var user = new User({ name: 'Alexey', age: 31 });
-
+var user = new User({ name: 'Alexey', age: 31, position: 0 });
 var age = user.get('age');
 
 var position = user.get('position');
