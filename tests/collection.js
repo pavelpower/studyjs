@@ -6,10 +6,6 @@ var PositionsCollection = require('../models/collection');
 if ( _.isNull(PositionsCollection) )
     throw 'Class PositionsCollection in not defined';
     
-// to check up if PositionsCollection is function
-//if ( _.isFunction(PositionsCollection) ) 
-//    throw 'Varible PositionsCollection is not Class (function constructor)';
-    
 var positionsCollection = new PositionsCollection([
     {
         name: 'Director',
@@ -33,8 +29,16 @@ var positionsCollection = new PositionsCollection([
         price: '70000'
     }
     ]);
-    
-    if ( !positionsCollection instanceof PositionsCollection )
-    throw 'object position is not the instance of class Position';
-    
-    console.log(positionsCollection.get('c5'));
+
+// to chek up if positionsCollection is the instance of class PositionsCollection
+if ( !positionsCollection instanceof PositionsCollection )
+throw 'object positionsCollection is not the instance of class PositionsCollection';
+
+// to test the data
+var i = 1;
+var clNomber;
+for (; i <=5; i++) {
+                clNomber = 'c' + i;
+                console.log(positionsCollection.get(clNomber));
+            };
+
