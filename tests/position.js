@@ -36,6 +36,7 @@ if ( !position instanceof Position )
 // в Bacbone модели свойства переданные в контруктор находятся в 
 // хеше attributes
 // там и проверяем наличие их, и соответствие типу
+
 if ( !_.isString(position.attributes.name) )
     throw 'name is not a string';
     
