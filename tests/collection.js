@@ -1,6 +1,6 @@
 var _ = require('underscore');
  
-var PositionsCollection = require('../models/collection');
+var PositionsCollection = require('../models/PositionsCollection');
 
 // to check up if PositionsCollection exists
 if ( _.isNull(PositionsCollection) )
@@ -25,7 +25,12 @@ var positionsCollection = new PositionsCollection([
     },
     
     {
-        name: 'Ulo', //WTF?
+        name: 'Ulo',
+        price: '70000'
+    },
+    //pavel: я бы еще в тест добавил не валидные модели по имени
+    {
+        name: 0,
         price: '70000'
     }
     ]);
@@ -35,10 +40,11 @@ if ( !positionsCollection instanceof PositionsCollection )
 throw 'object positionsCollection is not the instance of class PositionsCollection';
 
 // to test the data
-var i = 1;
-var clNomber;
-for (; i <=5; i++) {
-                clNomber = 'c' + i;
-                console.log(positionsCollection.get(clNomber));
-            };
+//pavel: откроую тебе сикрет, у колекций есть куча методов типа each, map, where
+//pavel: http://underscorejs.org/#collections
+positionsCollection.each(function(position) {
+    console.log(position.get('name'), position.get('price'));
+});
+//pavel: есть еще интересные методы типа pluck
+console.log(positionsCollection.pluck('name').join('|'));
 
