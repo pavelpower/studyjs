@@ -9,11 +9,11 @@ if ( _.isNull(PositionsCollection) )
 var positionsCollection = new PositionsCollection([
     {
         name: 'Director',
-        prise: 100000
+        price: 100000
     },
     {
         name: 'Programmist',
-        prise: 80000
+        price: 80000
     },
     {
         name: 'Manager',
